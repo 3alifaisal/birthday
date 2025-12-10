@@ -11,8 +11,8 @@ $('document').ready(function () {
 		var isMobile = $(window).width() < 600;
 		var pacing = isMobile ? 40 : 100;
 		var offset = isMobile ? 0 : 0;
-		// With scale removed, we position relative to viewport top
-		var balloonTop = isMobile ? window.innerHeight * 0.12 : 240;
+		// Balloons at 30% of screen height (lower) to clear decoration/banner
+		var balloonTop = isMobile ? window.innerHeight * 0.3 : 240;
 
 		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) }, 500);
 		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) }, 500);
@@ -160,7 +160,7 @@ $('document').ready(function () {
 
 		var isMobile = $(window).width() < 600;
 		var pacing = isMobile ? 40 : 100;
-		var balloonTop = isMobile ? window.innerHeight * 0.12 : 240;
+		var balloonTop = isMobile ? window.innerHeight * 0.3 : 240;
 
 		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) }, 500);
 		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) }, 500);

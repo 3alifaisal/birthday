@@ -1673,12 +1673,11 @@ audio {
 
 	/* 4. Cake */
 	.cake-cover {
-		margin-top: 20vh;
-		/* Position slightly below balloons area */
+		margin-top: 35vh;
+		/* Position below lower balloons (30%) */
 		width: 100%;
 		text-align: center;
 		flex: 0 0 auto;
-		/* Don't shrink */
 	}
 
 	.cake {
