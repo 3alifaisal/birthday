@@ -14,8 +14,8 @@ $('document').ready(function () {
 		// Extra left offset to perfectly center odd number of balloons (7)
 		// Shift slightly left to counter "right-leaning" feeling
 		var offset = isMobile ? 35 : 0;
-		// Balloons at 20% to allow cake to move up
-		var balloonTop = isMobile ? window.innerHeight * 0.2 : 240;
+		// Balloons at 25% to center between banner and lower elements
+		var balloonTop = isMobile ? window.innerHeight * 0.25 : 240;
 
 		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) - offset }, 500);
 		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) - offset }, 500);
@@ -164,7 +164,7 @@ $('document').ready(function () {
 		var isMobile = $(window).width() < 600;
 		var pacing = isMobile ? 35 : 100;
 		var offset = isMobile ? 35 : 0;
-		var balloonTop = isMobile ? window.innerHeight * 0.2 : 240;
+		var balloonTop = isMobile ? window.innerHeight * 0.25 : 240;
 
 		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) - offset }, 500);
 		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) - offset }, 500);
