@@ -1659,22 +1659,22 @@ audio {
 
 	/* 3. Balloons */
 	.balloons {
-		width: 60px;
-		height: 110px;
-		background-size: 60px 110px;
+		width: 50px;
+		height: 90px;
+		background-size: 50px 90px;
 		/* Positioned via JS, but we can set base styles */
 		z-index: 100;
 	}
 
 	.balloons h2 {
-		font-size: 18px;
-		margin-top: 25px;
+		font-size: 15px;
+		margin-top: 20px;
 	}
 
 	/* 4. Cake */
 	.cake-cover {
-		margin-top: 35vh;
-		/* Position below lower balloons (30%) */
+		margin-top: 20vh;
+		/* Moved cake even higher */
 		width: 100%;
 		text-align: center;
 		flex: 0 0 auto;

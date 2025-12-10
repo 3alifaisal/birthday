@@ -9,18 +9,21 @@ $('document').ready(function () {
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
 
 		var isMobile = $(window).width() < 600;
-		var pacing = isMobile ? 40 : 100;
-		var offset = isMobile ? 0 : 0;
-		// Balloons at 30% of screen height (lower) to clear decoration/banner
-		var balloonTop = isMobile ? window.innerHeight * 0.3 : 240;
+		// Tighter pacing for smaller balloons
+		var pacing = isMobile ? 35 : 100;
+		// Extra left offset to perfectly center odd number of balloons (7)
+		// Shift slightly left to counter "right-leaning" feeling
+		var offset = isMobile ? 35 : 0;
+		// Balloons at 20% to allow cake to move up
+		var balloonTop = isMobile ? window.innerHeight * 0.2 : 240;
 
-		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) }, 500);
-		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) }, 500);
-		$('#b33').animate({ top: balloonTop, left: vw - (1 * pacing) }, 500);
-		$('#b44').animate({ top: balloonTop, left: vw }, 500);
-		$('#b55').animate({ top: balloonTop, left: vw + (1 * pacing) }, 500);
-		$('#b66').animate({ top: balloonTop, left: vw + (2 * pacing) }, 500);
-		$('#b77').animate({ top: balloonTop, left: vw + (3 * pacing) }, 500);
+		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) - offset }, 500);
+		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) - offset }, 500);
+		$('#b33').animate({ top: balloonTop, left: vw - (1 * pacing) - offset }, 500);
+		$('#b44').animate({ top: balloonTop, left: vw - offset }, 500);
+		$('#b55').animate({ top: balloonTop, left: vw + (1 * pacing) - offset }, 500);
+		$('#b66').animate({ top: balloonTop, left: vw + (2 * pacing) - offset }, 500);
+		$('#b77').animate({ top: balloonTop, left: vw + (3 * pacing) - offset }, 500);
 	});
 
 	$('#turn_on').click(function () {
@@ -159,16 +162,17 @@ $('document').ready(function () {
 		$('#b7').attr('id', 'b77')
 
 		var isMobile = $(window).width() < 600;
-		var pacing = isMobile ? 40 : 100;
-		var balloonTop = isMobile ? window.innerHeight * 0.3 : 240;
+		var pacing = isMobile ? 35 : 100;
+		var offset = isMobile ? 35 : 0;
+		var balloonTop = isMobile ? window.innerHeight * 0.2 : 240;
 
-		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) }, 500);
-		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) }, 500);
-		$('#b33').animate({ top: balloonTop, left: vw - (1 * pacing) }, 500);
-		$('#b44').animate({ top: balloonTop, left: vw }, 500);
-		$('#b55').animate({ top: balloonTop, left: vw + (1 * pacing) }, 500);
-		$('#b66').animate({ top: balloonTop, left: vw + (2 * pacing) }, 500);
-		$('#b77').animate({ top: balloonTop, left: vw + (3 * pacing) }, 500);
+		$('#b11').animate({ top: balloonTop, left: vw - (3 * pacing) - offset }, 500);
+		$('#b22').animate({ top: balloonTop, left: vw - (2 * pacing) - offset }, 500);
+		$('#b33').animate({ top: balloonTop, left: vw - (1 * pacing) - offset }, 500);
+		$('#b44').animate({ top: balloonTop, left: vw - offset }, 500);
+		$('#b55').animate({ top: balloonTop, left: vw + (1 * pacing) - offset }, 500);
+		$('#b66').animate({ top: balloonTop, left: vw + (2 * pacing) - offset }, 500);
+		$('#b77').animate({ top: balloonTop, left: vw + (3 * pacing) - offset }, 500);
 		$('.balloons').css('opacity', '0.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function () {
